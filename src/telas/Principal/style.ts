@@ -11,10 +11,12 @@ export const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "bold",
     marginTop: 48,
+    fontFamily: "Roboto_300Light"
   },
   textData: {
     color: "#6B6B6B",
     fontSize: 16,
+    fontFamily: "Roboto_300Light"
   },
   textInputParticipant: {
     flex: 1,
@@ -25,6 +27,7 @@ export const styles = StyleSheet.create({
     padding: 16,
     fontSize: 16,
     marginRight: 12,
+    fontFamily: "Roboto_300Light"
   },
   botao: {
     width: 56,
