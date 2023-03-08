@@ -48,4 +48,13 @@ export const styles = StyleSheet.create({
     marginTop: 36,
     marginBottom: 42,
   },
+  textParticipante: {
+    fontFamily: "Roboto_300Light",
+    fontWeight: "700",
+    fontSize: 20,
+    lineHeight: 23,
+    color: "#FDFCFE",
+    marginBottom: 16,
+  }
+
 });

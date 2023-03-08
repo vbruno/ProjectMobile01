@@ -11,6 +11,7 @@
   "dependencies": {
     "@expo-google-fonts/roboto": "^0.2.3",
     "@expo/webpack-config": "^18.0.1",
+    "@react-native/assets-registry": "^0.72.0",
     "expo": "~48.0.4",
     "expo-font": "~11.1.1",
     "expo-status-bar": "~1.4.4",

@@ -1,6 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import { Text, TextInput, TouchableOpacity, View } from "react-native";
 
+import { Participante } from "../../componente/Participante";
 import { styles } from "./style";
 
 export default function Principal() {
@@ -24,6 +25,13 @@ export default function Principal() {
           <Text style={styles.botaoTexto}>+</Text>
         </TouchableOpacity>
       </View>
+
+      <Text style={styles.textParticipante} >Participantes</Text>
+
+      <Participante />
+      <Participante />
+      <Participante />
+
     </View>
   );
 }
