@@ -1,4 +1,5 @@
 import { StatusBar } from "expo-status-bar";
+import { useState } from "react";
 import { ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
 
 import { Participante } from "../../componente/Participante";
@@ -6,10 +7,14 @@ import { styles } from "./style";
 
 export default function Principal() {
 
-  const participantes = ['bruna', 'janja', 'adrina', 'rafaela', 'gabriela', 'ariana']
+  const [participantes, setParticipantes] = useState(['Bruna'])
 
   function adicionarParticipante() {
-    console.log("Func add Participante");
+
+    setParticipantes(prevState => [...prevState, "ana"]);
+
+    console.log(participantes);
+
   }
 
   function removerParticipante() {
