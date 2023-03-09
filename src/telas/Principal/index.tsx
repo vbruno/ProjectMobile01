@@ -9,9 +9,13 @@ export default function Principal() {
 
   const [participantes, setParticipantes] = useState(['Bruna'])
 
+  let inputText = ""
+
   function adicionarParticipante() {
 
-    setParticipantes(prevState => [...prevState, "ana"]);
+    setParticipantes(prevState => [...prevState, inputText]);
+
+    console.log(inputText)
 
     console.log(participantes);
 
@@ -32,6 +36,7 @@ export default function Principal() {
           style={styles.textInputParticipant}
           placeholder="Nome do participante"
           placeholderTextColor="#6b6b6b"
+          onChangeText={(text) => inputText = text}
         />
         <TouchableOpacity style={styles.botao} onPress={adicionarParticipante}>
           <Text style={styles.botaoTexto}>+</Text>
