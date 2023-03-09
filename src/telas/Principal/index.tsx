@@ -1,10 +1,13 @@
 import { StatusBar } from "expo-status-bar";
-import { Text, TextInput, TouchableOpacity, View } from "react-native";
+import { ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
 
 import { Participante } from "../../componente/Participante";
 import { styles } from "./style";
 
 export default function Principal() {
+
+  const participantes = ['bruna', 'janja', 'adrina', 'rafaela', 'gabriela', 'ariana']
+
   function adicionarParticipante() {
     console.log("Func add Participante");
   }
@@ -32,9 +35,17 @@ export default function Principal() {
 
       <Text style={styles.textParticipante} >Participantes</Text>
 
-      <Participante nome={"Bruna"} btnRemover={() => removerParticipante()} />
-      <Participante nome={"Janja"} btnRemover={() => removerParticipante()} />
-      <Participante nome={"Adriana"} btnRemover={() => removerParticipante()} />
+      <ScrollView showsVerticalScrollIndicator={false} >
+        {
+          participantes.map((participante, index) => (
+            <Participante
+              key={index}
+              nome={participante}
+              btnRemover={() => removerParticipante()} />
+          ))
+        }
+      </ScrollView>
+
 
     </View>
   );
