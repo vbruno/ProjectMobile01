@@ -5,8 +5,12 @@ import { Participante } from "../../componente/Participante";
 import { styles } from "./style";
 
 export default function Principal() {
-  function btnHome() {
-    console.log("Botão Pressionado!");
+  function adicionarParticipante() {
+    console.log("Func add Participante");
+  }
+
+  function removerParticipante() {
+    console.log("Func remover Participante");
   }
 
   return (
@@ -21,16 +25,16 @@ export default function Principal() {
           placeholder="Nome do participante"
           placeholderTextColor="#6b6b6b"
         />
-        <TouchableOpacity style={styles.botao} onPress={btnHome}>
+        <TouchableOpacity style={styles.botao} onPress={adicionarParticipante}>
           <Text style={styles.botaoTexto}>+</Text>
         </TouchableOpacity>
       </View>
 
       <Text style={styles.textParticipante} >Participantes</Text>
 
-      <Participante />
-      <Participante />
-      <Participante />
+      <Participante nome={"Bruna"} btnRemover={() => removerParticipante()} />
+      <Participante nome={"Janja"} btnRemover={() => removerParticipante()} />
+      <Participante nome={"Adriana"} btnRemover={() => removerParticipante()} />
 
     </View>
   );
