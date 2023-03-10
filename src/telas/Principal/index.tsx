@@ -22,8 +22,10 @@ export default function Principal() {
 
   }
 
-  function removerParticipante() {
-    console.log("Func remover Participante");
+  function removerParticipante(nome: string) {
+
+    setParticipantes(prevState => prevState.filter(participante => participante !== nome));
+
   }
 
   return (
@@ -51,8 +53,8 @@ export default function Principal() {
           participantes.map((participante, index) => (
             <Participante
               key={index}
-              nome={participante}
-              btnRemover={() => removerParticipante()} />
+              nome={String(participante)}
+              btnRemover={() => removerParticipante(String(participante))} />
           ))
         }
       </ScrollView>
