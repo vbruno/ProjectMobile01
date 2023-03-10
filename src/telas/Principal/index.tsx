@@ -7,7 +7,7 @@ import { styles } from "./style";
 
 export default function Principal() {
 
-  const [participantes, setParticipantes] = useState(['Bruna'])
+  const [participantes, setParticipantes] = useState<String[]>([])
   const [participante, setParticipante] = useState("")
 
   function adicionarParticipante() {
