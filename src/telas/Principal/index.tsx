@@ -8,16 +8,17 @@ import { styles } from "./style";
 export default function Principal() {
 
   const [participantes, setParticipantes] = useState(['Bruna'])
-
-  let inputText = ""
+  const [participante, setParticipante] = useState("")
 
   function adicionarParticipante() {
 
-    setParticipantes(prevState => [...prevState, inputText]);
-
-    console.log(inputText)
-
-    console.log(participantes);
+    if (participantes.includes(participante.trim())) {
+      return console.log(participante, "- encontrado");
+    } else if (participante == "" || participante == null) {
+      return console.log("encontrado vazio ou null");
+    } else {
+      setParticipantes(prevState => [...prevState, participante]);
+    }
 
   }
 
@@ -36,7 +37,7 @@ export default function Principal() {
           style={styles.textInputParticipant}
           placeholder="Nome do participante"
           placeholderTextColor="#6b6b6b"
-          onChangeText={(text) => inputText = text}
+          onChangeText={setParticipante}
         />
         <TouchableOpacity style={styles.botao} onPress={adicionarParticipante}>
           <Text style={styles.botaoTexto}>+</Text>
